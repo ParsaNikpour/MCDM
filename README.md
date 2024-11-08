@@ -1,7 +1,7 @@
 # MCDM Techniques in Python
 This repository contains Python :snake: implementations of multi-criteria decision-making techniques.
 
-:triangular_flag_on_post: I have added Pairwise Comparison Matrix, Best-Worst Method and AHP to the code :grey_exclamation:
+:triangular_flag_on_post: I have added Pairwise Comparison Matrix, Best-Worst Method, and AHP to the code :grey_exclamation:
 
 :triangular_flag_on_post:From compensatory techniques, only Entropy, SAW, and WASPAS have been implemented :grey_exclamation:
 
@@ -15,30 +15,30 @@ In this method, a matrix is used (like Figure.1) to compute the weights of each 
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*Figure.1 A Pairwise Comparison Matrix [1]*
 
-🌵Before computing the weights, the consistency of the matrix should be checked. If the matrix is consistant there are four methods to find the weights: 
+🌵Before computing the weights, the consistency of the matrix should be checked. If the matrix is consistent there are four methods to find the weights: 
 
   1. Sum of Rows 
   2. Sum of Columns
   3. Arithmetic Mean 
   4. Geometric Mean
 
-🥑Geometric Mean is the best and the Sum of Rows is the worst ones. However, if the matrix is inconsistant, there are four method to compute the weights:
+🥑Geometric Mean is the best, and the Sum of Rows is the worst one. However, if the matrix is inconsistant, there are four methods to compute the weights:
   1. Least Square Method
   2. Logarithmic Least Square Method
   3. Eigenvalue Method
  
   
 ## Best-Worst Method (BWM)
-You can find thid method in [2]. This method reduces the computations alot, however it requires solving a nonlinear mathematical model. 
-The baseline code is from https://github.com/Valdecy/pyDecision.git repository. However, there were some issues 📰 which I corrected them.
+You can find this method in [2]. This method reduces the computations a lot; however, it requires solving a nonlinear mathematical model. 
+The baseline code is from https://github.com/Valdecy/pyDecision.git repository. However, there were some issues 📰, which I corrected.
 
 There are two methods for computing consistency in BWM: 
 1. Input-based consistency
 2. Output-based consistency
 
-Both of which, have been added to the code.
+Both of which have been added to the code.
 
-Also there are two model two find the weights. You can find both of them in the code.
+Also, there are two models to find the weights. You can find both of them in the code.
 
 
 ## AHP
