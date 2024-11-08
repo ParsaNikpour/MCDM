@@ -48,7 +48,7 @@ You can find an example of AHP in Figure.2.
 
 ![AHP](https://github.com/user-attachments/assets/b430085d-747e-4784-8f75-d3e39b832406)
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*Figure.2 An example of AHP [3]*
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;*Figure.2 An example of AHP [3]*
 
 
 # Citation
