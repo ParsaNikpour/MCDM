@@ -1,7 +1,7 @@
 # MCDM Techniques in Python
 This repository contains Python :snake: implementations of multi-criteria decision-making techniques.
 
-:triangular_flag_on_post: I have added Pairwise Comparison Matrix, Best-Worst Method, and AHP to the code :grey_exclamation:
+:triangular_flag_on_post: I have added Pairwise Comparison Matrix, Best-Worst Method, and AHP to the repo :grey_exclamation:
 
 :triangular_flag_on_post:From compensatory techniques, only Entropy, SAW, and WASPAS have been implemented :grey_exclamation:
 
