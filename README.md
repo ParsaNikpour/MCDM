@@ -1,7 +1,7 @@
 # MCDM Techniques in Python
 This repository contains Python :snake: implementations of multi-criteria decision-making techniques.
 
-:triangular_flag_on_post:Weighted-Sum Method, Goal Programming, Epsilon Constraint, and Augmented Epsilon Constraint (Augmecon) have been implemented as multi objective methods using Pyomo :grey_exclamation:
+:triangular_flag_on_post:Weighted-Sum Method, Goal Programming (Weighted and Lexicographic), Epsilon Constraint, and Augmented Epsilon Constraint (Augmecon) have been implemented as multi objective methods using Pyomo :grey_exclamation:
 
 :triangular_flag_on_post:From compensatory techniques, Entropy, SAW, WASPAS, Pairwise Comparison Matrix, Best-Worst Method, AHP, Topsis, Vikor, Dematel, Promethee I, and Electre I have been implemented :grey_exclamation:
 
@@ -10,7 +10,8 @@ This repository contains Python :snake: implementations of multi-criteria decisi
 ## MODM
 ### Weighted-Sum Method (WSM)
 The Weighted Sum Method (WSM) is arguably the simplest approach for multi-objective optimization. This method works by multiplying each objective function by its assigned weight and then summing them together to form a single composite objective function. Once this combined function is obtained, standard single-objective optimization techniques can be used to solve the problem.
-                                                                                                                              
+![wsm](https://github.com/user-attachments/assets/d28aa957-60f6-42dd-aadb-2c477bbb2013)
+                                                                                                                      
 ### Goal Programming
 Goal Programming is a straightforward and widely used method for multi-objective optimization. It works by converting multiple objectives into specific target goals. The method minimizes the deviations between the achieved results and these predefined goals.
 
@@ -18,21 +19,35 @@ In this approach, objectives are reformulated into constraints, each with associ
 
 By focusing on reducing deviations rather than optimizing a single composite function, Goal Programming allows decision-makers to prioritize multiple, potentially conflicting objectives in a flexible and structured manner.
 
+Weighted Goal Programming (WGP):
+![wgp](https://github.com/user-attachments/assets/cd0228e0-2f07-4afa-bc26-3b9a2c8ab88b)
+
+
+Lexicographic Goal Programming (LGP):
+
+It is just like weighted goal programming, but W1 >> W2 >> ... >> Wn.
+
+
+
 ### Epsilon Constraint
 The ε-Constraint Method is a popular technique for multi-objective optimization that focuses on optimizing one objective while treating the remaining objectives as constraints. Each of these additional objectives is bounded by a predefined threshold value, ϵ.
 
 In this approach, one objective function is selected as the primary objective to be maximized or minimized. The other objectives are converted into constraints, where their values must not exceed or fall below specified ϵ-values. By systematically varying these ϵ-values, a set of Pareto-optimal solutions can be obtained, representing different trade-offs among the objectives.
 
 The ε-Constraint Method is particularly useful for exploring the trade-off space in detail and generating solutions that satisfy specific decision-maker preferences or practical requirements.
+![ep](https://github.com/user-attachments/assets/c00646bf-6cca-4130-94d2-06f6a4afdfc9)
 
 **The main drawback of the ε-Constraint Method is that it also produces weakly efficient solutions.**
+
+
 ### Augmented Epsilon Constrain (Augmented)
 The Augmented ε-Constraint Method is an enhanced version of the ε-Constraint Method that optimizes one objective while converting the remaining objectives into constraints, augmented by a small penalty term to ensure a more balanced exploration of the Pareto front.
 
 In this approach, a penalty term proportional to the sum of constraint violations is added to the primary objective function. This modification encourages solutions that not only optimize the primary objective but also remain feasible with respect to the other objectives' ϵ-values. By systematically varying ϵ-values, the method generates Pareto-optimal solutions while improving solution diversity and stability.
 
-**This method's key advantage is that it only produces efficient solutions (no weakly efficient solutions are produced)**
+![aug](https://github.com/user-attachments/assets/a64e0fb3-518f-4127-81bf-067df131a089)
 
+**This method's key advantage is that it only produces efficient solutions (no weakly efficient solutions are produced)**
 
 
 ## MADM
