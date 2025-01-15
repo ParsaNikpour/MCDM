@@ -10,15 +10,28 @@ This repository contains Python :snake: implementations of multi-criteria decisi
 ## MODM
 ### Weighted-Sum Method (WSM)
 The Weighted Sum Method (WSM) is arguably the simplest approach for multi-objective optimization. This method works by multiplying each objective function by its assigned weight and then summing them together to form a single composite objective function. Once this combined function is obtained, standard single-objective optimization techniques can be used to solve the problem.
-
+                                                                                                                              
 ### Goal Programming
+Goal Programming is a straightforward and widely used method for multi-objective optimization. It works by converting multiple objectives into specific target goals. The method minimizes the deviations between the achieved results and these predefined goals.
 
+In this approach, objectives are reformulated into constraints, each with associated deviation variables to account for underachievement or overachievement relative to the target. A weighted sum of these deviations is then minimized, with the weights reflecting the relative importance of achieving each goal.
+
+By focusing on reducing deviations rather than optimizing a single composite function, Goal Programming allows decision-makers to prioritize multiple, potentially conflicting objectives in a flexible and structured manner.
 
 ### Epsilon Constraint
+The ε-Constraint Method is a popular technique for multi-objective optimization that focuses on optimizing one objective while treating the remaining objectives as constraints. Each of these additional objectives is bounded by a predefined threshold value, ϵ.
 
+In this approach, one objective function is selected as the primary objective to be maximized or minimized. The other objectives are converted into constraints, where their values must not exceed or fall below specified ϵ-values. By systematically varying these ϵ-values, a set of Pareto-optimal solutions can be obtained, representing different trade-offs among the objectives.
 
+The ε-Constraint Method is particularly useful for exploring the trade-off space in detail and generating solutions that satisfy specific decision-maker preferences or practical requirements.
+
+**The main drawback of the ε-Constraint Method is that it also produces weakly efficient solutions.**
 ### Augmented Epsilon Constrain (Augmented)
+The Augmented ε-Constraint Method is an enhanced version of the ε-Constraint Method that optimizes one objective while converting the remaining objectives into constraints, augmented by a small penalty term to ensure a more balanced exploration of the Pareto front.
 
+In this approach, a penalty term proportional to the sum of constraint violations is added to the primary objective function. This modification encourages solutions that not only optimize the primary objective but also remain feasible with respect to the other objectives' ϵ-values. By systematically varying ϵ-values, the method generates Pareto-optimal solutions while improving solution diversity and stability.
+
+**This method's key advantage is that it only produces efficient solutions (no weakly efficient solutions are produced)**
 
 
 
